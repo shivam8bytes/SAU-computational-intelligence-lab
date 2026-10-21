@@ -1,0 +1,1661 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Computational Intelligence Lab | South Asian University</title>
+
+    <meta name="description"
+          content="Computational Intelligence Lab at South Asian University - Lab information, projects, resources and announcements.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <style>
+
+        
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            color: #172033;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+
+
+        .topbar {
+            background: #071b36;
+            color: white;
+            font-size: 13px;
+            padding: 9px 0;
+        }
+
+        .topbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topbar a:hover {
+            text-decoration: underline;
+        }
+
+
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: white;
+            border-bottom: 1px solid #e5e9ef;
+        }
+
+        .navbar {
+            height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            width: 46px;
+            height: 46px;
+            border-radius: 8px;
+            background: #0b4ea2;
+            color: white;
+            display: grid;
+            place-items: center;
+            font-family: "Space Grotesk";
+            font-weight: 700;
+        }
+
+        .brand-name {
+            font-family: "Space Grotesk";
+            font-weight: 700;
+            font-size: 17px;
+        }
+
+        .brand-university {
+            display: block;
+            color: #687386;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 27px;
+        }
+
+        nav a {
+            color: #364152;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #0b4ea2;
+        }
+
+        .contact-button {
+            background: #0b4ea2;
+            color: white !important;
+            padding: 11px 18px;
+            border-radius: 5px;
+        }
+
+        .contact-button:hover {
+            background: #071b36;
+        }
+
+        .menu-button {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 26px;
+            cursor: pointer;
+        }
+
+
+
+        .hero {
+            min-height: 590px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            color: white;
+
+            background:
+                radial-gradient(
+                    circle at 85% 25%,
+                    rgba(91, 166, 235, 0.35),
+                    transparent 25%
+                ),
+                linear-gradient(
+                    120deg,
+                    #06172f,
+                    #0b315c,
+                    #0b4d83
+                );
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background-image:
+                linear-gradient(
+                    rgba(255,255,255,0.035) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.035) 1px,
+                    transparent 1px
+                );
+
+            background-size: 45px 45px;
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 800px;
+        }
+
+        .hero-label {
+            display: inline-block;
+            color: #9fd0ff;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: "Space Grotesk";
+            font-size: clamp(45px, 7vw, 76px);
+            line-height: 1;
+            letter-spacing: -3px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #9fd0ff;
+        }
+
+        .hero-description {
+            max-width: 690px;
+            color: #dce9f7;
+            font-size: 18px;
+            margin-bottom: 32px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 21px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .button-primary {
+            background: white;
+            color: #09264b;
+        }
+
+        .button-primary:hover {
+            transform: translateY(-2px);
+        }
+
+        .button-outline {
+            border: 1px solid rgba(255,255,255,.5);
+            color: white;
+        }
+
+        .button-outline:hover {
+            background: rgba(255,255,255,.1);
+        }
+
+
+
+        .quick-access {
+            margin-top: -55px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background: white;
+            box-shadow: 0 15px 45px rgba(11, 31, 55, .12);
+        }
+
+        .quick-item {
+            padding: 25px;
+            border-right: 1px solid #e6eaf0;
+            transition: .3s;
+        }
+
+        .quick-item:last-child {
+            border-right: none;
+        }
+
+        .quick-item:hover {
+            background: #f3f8fd;
+        }
+
+        .quick-number {
+            color: #0b4ea2;
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .quick-item h3 {
+            font-family: "Space Grotesk";
+            margin: 6px 0;
+            font-size: 19px;
+        }
+
+        .quick-item p {
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+
+
+        .about {
+            padding: 100px 0 90px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.15fr .85fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .section-label {
+            color: #0b4ea2;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: "Space Grotesk";
+            font-size: 42px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .about-text {
+            color: #596475;
+            margin-bottom: 15px;
+        }
+
+        .about-box {
+            background: #f1f6fb;
+            padding: 35px;
+            border-left: 4px solid #0b4ea2;
+        }
+
+        .about-box h3 {
+            font-family: "Space Grotesk";
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        .about-box p {
+            color: #657184;
+            font-size: 14px;
+        }
+
+
+
+        .projects {
+            background: #f6f8fb;
+            padding: 90px 0;
+        }
+
+        .section-heading {
+            max-width: 700px;
+            margin-bottom: 45px;
+        }
+
+        .section-heading p {
+            color: #667085;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .project-card {
+            background: white;
+            border: 1px solid #e1e7ee;
+            padding: 30px;
+            transition: .3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(10,40,70,.08);
+        }
+
+        .project-tag {
+            display: inline-block;
+            background: #e8f2fc;
+            color: #0b4ea2;
+            padding: 5px 9px;
+            font-size: 11px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .project-card h3 {
+            font-family: "Space Grotesk";
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: #687386;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .project-link {
+            color: #0b4ea2;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+
+
+        .resources {
+            padding: 90px 0;
+        }
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .resource-card {
+            border: 1px solid #e2e7ed;
+            padding: 27px;
+            transition: .3s;
+        }
+
+        .resource-card:hover {
+            border-color: #0b4ea2;
+            transform: translateY(-3px);
+        }
+
+        .resource-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 7px;
+            background: #eaf3fb;
+            color: #0b4ea2;
+            display: grid;
+            place-items: center;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .resource-card h3 {
+            font-family: "Space Grotesk";
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .resource-card p {
+            color: #6b7280;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .resource-card a {
+            color: #0b4ea2;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+
+        .announcements {
+            background: #071b36;
+            color: white;
+            padding: 90px 0;
+        }
+
+        .announcements .section-label {
+            color: #9fd0ff;
+        }
+
+        .announcement-list {
+            border-top: 1px solid rgba(255,255,255,.15);
+        }
+
+        .announcement {
+            display: grid;
+            grid-template-columns: 150px 1fr 100px;
+            align-items: center;
+            gap: 25px;
+            padding: 25px 0;
+            border-bottom: 1px solid rgba(255,255,255,.15);
+        }
+
+        .announcement-date {
+            color: #9fd0ff;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .announcement h3 {
+            font-family: "Space Grotesk";
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .announcement p {
+            color: #aebed0;
+            font-size: 13px;
+        }
+
+        .announcement-link {
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 700;
+            text-align: right;
+        }
+
+
+
+        .people {
+            padding: 90px 0;
+        }
+
+        .people-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .person-card {
+            border: 1px solid #e2e7ed;
+            padding: 28px;
+        }
+
+        .person-photo {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #dbeafe, #0b4ea2);
+            margin-bottom: 18px;
+        }
+
+        .person-card h3 {
+            font-family: "Space Grotesk";
+            font-size: 19px;
+        }
+
+        .person-role {
+            color: #0b4ea2;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .person-card p {
+            color: #697586;
+            font-size: 13px;
+            margin-top: 9px;
+        }
+
+
+        
+
+        .contact {
+            background: #eaf3fb;
+            padding: 75px 0;
+        }
+
+        .contact-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .contact h2 {
+            font-family: "Space Grotesk";
+            font-size: 37px;
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+
+        .contact p {
+            color: #637083;
+        }
+
+        footer {
+            background: #041225;
+            color: white;
+            padding: 60px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 45px;
+        }
+
+        footer h3 {
+            font-family: "Space Grotesk";
+            margin-bottom: 12px;
+        }
+
+        footer h4 {
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        footer p,
+        footer li a {
+            color: #99a8ba;
+            font-size: 13px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 8px;
+        }
+
+        footer li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,.1);
+            padding-top: 20px;
+            color: #78889c;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+
+        @media (max-width: 950px) {
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 78px;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 25px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            .menu-button {
+                display: block;
+            }
+
+            .quick-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-grid,
+            .people-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .resource-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .topbar {
+                display: none;
+            }
+
+            .hero {
+                min-height: 560px;
+            }
+
+            .hero h1 {
+                font-size: 47px;
+                letter-spacing: -2px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .quick-access {
+                margin-top: 0;
+            }
+
+            .quick-grid,
+            .project-grid,
+            .resource-grid,
+            .people-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-item {
+                border-right: none;
+                border-bottom: 1px solid #e6eaf0;
+            }
+
+            .about,
+            .projects,
+            .resources,
+            .announcements,
+            .people {
+                padding: 65px 0;
+            }
+
+            .section-title {
+                font-size: 34px;
+            }
+
+            .announcement {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .announcement-link {
+                text-align: left;
+                margin-top: 7px;
+            }
+
+            .contact-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .copyright {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+
+<div class="topbar">
+
+    <div class="container topbar-content">
+
+        <span>
+            South Asian University · New Delhi, India
+        </span>
+
+        <span>
+            <a href="#">SAU Website</a>
+            &nbsp; | &nbsp;
+            <a href="#">Student Portal</a>
+        </span>
+
+    </div>
+
+</div>
+
+
+
+<header>
+
+    <div class="container navbar">
+
+        <a href="#" class="brand">
+
+            <div class="logo">
+                CI
+            </div>
+
+            <div>
+                <div class="brand-name">
+                    Computational Intelligence Lab
+                </div>
+
+                <span class="brand-university">
+                    South Asian University
+                </span>
+            </div>
+
+        </a>
+
+
+        <button class="menu-button" onclick="toggleMenu()">
+            ☰
+        </button>
+
+
+        <nav id="navigation">
+
+            <a href="#about">About</a>
+
+            <a href="#projects">Projects</a>
+
+            <a href="#resources">Resources</a>
+
+            <a href="#announcements">Announcements</a>
+
+            <a href="#people">People</a>
+
+            <a href="#contact" class="contact-button">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+
+<section class="hero">
+
+    <div class="container hero-content">
+
+        <div class="hero-label">
+            Computational Intelligence Lab
+        </div>
+
+        <h1>
+            Explore.<br>
+            <span>Learn. Innovate.</span>
+        </h1>
+
+        <p class="hero-description">
+            Welcome to the Computational Intelligence Lab at South Asian
+            University. Explore our projects, access useful resources,
+            discover lab activities and stay updated with the latest
+            announcements.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#projects" class="button button-primary">
+                Explore Projects →
+            </a>
+
+            <a href="#resources" class="button button-outline">
+                View Resources
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="quick-access">
+
+    <div class="container">
+
+        <div class="quick-grid">
+
+            <a href="#about" class="quick-item">
+
+                <span class="quick-number">01</span>
+
+                <h3>About the Lab</h3>
+
+                <p>
+                    Learn about CI Lab and its activities.
+                </p>
+
+            </a>
+
+
+            <a href="#projects" class="quick-item">
+
+                <span class="quick-number">02</span>
+
+                <h3>Projects</h3>
+
+                <p>
+                    Explore current and completed projects.
+                </p>
+
+            </a>
+
+
+            <a href="#resources" class="quick-item">
+
+                <span class="quick-number">03</span>
+
+                <h3>Resources</h3>
+
+                <p>
+                    Access learning and research resources.
+                </p>
+
+            </a>
+
+
+            <a href="#announcements" class="quick-item">
+
+                <span class="quick-number">04</span>
+
+                <h3>Announcements</h3>
+
+                <p>
+                    Stay updated with lab activities.
+                </p>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="about" id="about">
+
+    <div class="container about-grid">
+
+        <div>
+
+            <div class="section-label">
+                About CI Lab
+            </div>
+
+            <h2 class="section-title">
+                A place to learn, build and explore intelligent computing.
+            </h2>
+
+            <p class="about-text">
+                The Computational Intelligence Lab at South Asian University
+                provides a platform for students, faculty and researchers
+                interested in artificial intelligence, machine learning,
+                data science and related areas.
+            </p>
+
+            <p class="about-text">
+                The website brings important lab information, projects,
+                resources and announcements together in one easy-to-use
+                platform.
+            </p>
+
+            <br>
+
+            <a href="#" class="button"
+               style="background:#0b4ea2;color:white;">
+                Learn More About CI Lab
+            </a>
+
+        </div>
+
+
+        <div class="about-box">
+
+            <h3>
+                What We Do
+            </h3>
+
+            <p>
+                We support learning and research in computational
+                intelligence by providing opportunities to work on
+                projects, explore resources and collaborate with other
+                students and researchers.
+            </p>
+
+            <br>
+
+            <p>
+                Our goal is to create a simple digital platform where
+                the CI Lab community can easily find the information
+                they need.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="projects" id="projects">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                Lab Projects
+            </div>
+
+            <h2 class="section-title">
+                Explore our projects.
+            </h2>
+
+            <p>
+                Discover projects developed by students and researchers
+                in different areas of computational intelligence.
+            </p>
+
+        </div>
+
+
+        <div class="project-grid">
+
+
+            <article class="project-card">
+
+                <span class="project-tag">
+                    MACHINE LEARNING
+                </span>
+
+                <h3>
+                    Intelligent Prediction System
+                </h3>
+
+                <p>
+                    A machine learning project focused on using data
+                    to build prediction models.
+                </p>
+
+                <a href="#" class="project-link">
+                    View Project →
+                </a>
+
+            </article>
+
+
+            <article class="project-card">
+
+                <span class="project-tag">
+                    AI
+                </span>
+
+                <h3>
+                    Smart Image Classification
+                </h3>
+
+                <p>
+                    An artificial intelligence project exploring image
+                    classification using modern learning techniques.
+                </p>
+
+                <a href="#" class="project-link">
+                    View Project →
+                </a>
+
+            </article>
+
+
+            <article class="project-card">
+
+                <span class="project-tag">
+                    DATA SCIENCE
+                </span>
+
+                <h3>
+                    Data Analysis Platform
+                </h3>
+
+                <p>
+                    A project focused on analysing datasets and presenting
+                    useful information through visualisation.
+                </p>
+
+                <a href="#" class="project-link">
+                    View Project →
+                </a>
+
+            </article>
+
+        </div>
+
+        <br><br>
+
+        <a href="#" class="button"
+           style="background:#0b4ea2;color:white;">
+            View All Projects →
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<section class="resources" id="resources">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                Lab Resources
+            </div>
+
+            <h2 class="section-title">
+                Everything you need, in one place.
+            </h2>
+
+            <p>
+                Quickly access useful academic, research and lab resources.
+            </p>
+
+        </div>
+
+
+        <div class="resource-grid">
+
+
+            <article class="resource-card">
+
+                <div class="resource-icon">
+                    PDF
+                </div>
+
+                <h3>
+                    Research Papers
+                </h3>
+
+                <p>
+                    Browse selected papers and research publications.
+                </p>
+
+                <a href="#">
+                    Access Resources →
+                </a>
+
+            </article>
+
+
+            <article class="resource-card">
+
+                <div class="resource-icon">
+                    DOC
+                </div>
+
+                <h3>
+                    Lab Documents
+                </h3>
+
+                <p>
+                    Access important lab documents and guidelines.
+                </p>
+
+                <a href="#">
+                    View Documents →
+                </a>
+
+            </article>
+
+
+            <article class="resource-card">
+
+                <div class="resource-icon">
+                    WEB
+                </div>
+
+                <h3>
+                    Learning Resources
+                </h3>
+
+                <p>
+                    Useful websites, tutorials and learning material.
+                </p>
+
+                <a href="#">
+                    Start Learning →
+                </a>
+
+            </article>
+
+
+            <article class="resource-card">
+
+                <div class="resource-icon">
+                    LAB
+                </div>
+
+                <h3>
+                    Lab Facilities
+                </h3>
+
+                <p>
+                    Information about available laboratory facilities.
+                </p>
+
+                <a href="#">
+                    Explore Facilities →
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     ANNOUNCEMENTS
+========================================= -->
+
+<section class="announcements" id="announcements">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                Latest Updates
+            </div>
+
+            <h2 class="section-title">
+                Announcements
+            </h2>
+
+            <p style="color:#b5c4d5;">
+                Stay informed about upcoming activities, events and
+                important lab updates.
+            </p>
+
+        </div>
+
+
+        <div class="announcement-list">
+
+
+            <article class="announcement">
+
+                <div class="announcement-date">
+                    07 OCT 2026
+                </div>
+
+                <div>
+
+                    <h3>
+                        New Student Projects Added
+                    </h3>
+
+                    <p>
+                        New computational intelligence projects have been
+                        added to the project section.
+                    </p>
+
+                </div>
+
+                <a href="#" class="announcement-link">
+                    Read →
+                </a>
+
+            </article>
+
+
+            <article class="announcement">
+
+                <div class="announcement-date">
+                    02 OCT 2026
+                </div>
+
+                <div>
+
+                    <h3>
+                        CI Lab Research Seminar
+                    </h3>
+
+                    <p>
+                        A research seminar on artificial intelligence and
+                        machine learning will be conducted soon.
+                    </p>
+
+                </div>
+
+                <a href="#" class="announcement-link">
+                    Read →
+                </a>
+
+            </article>
+
+
+            <article class="announcement">
+
+                <div class="announcement-date">
+                    25 SEP 2026
+                </div>
+
+                <div>
+
+                    <h3>
+                        Student Research Opportunities
+                    </h3>
+
+                    <p>
+                        Students interested in research projects can
+                        contact the lab for available opportunities.
+                    </p>
+
+                </div>
+
+                <a href="#" class="announcement-link">
+                    Read →
+                </a>
+
+            </article>
+
+        </div>
+
+        <br>
+
+        <a href="#" class="button button-outline">
+            View All Announcements →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     PEOPLE
+========================================= -->
+
+<section class="people" id="people">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                Our People
+            </div>
+
+            <h2 class="section-title">
+                Meet the CI Lab community.
+            </h2>
+
+            <p>
+                Learn about the faculty, researchers and students involved
+                with the laboratory.
+            </p>
+
+        </div>
+
+
+        <div class="people-grid">
+
+
+            <article class="person-card">
+
+                <div class="person-photo"></div>
+
+                <h3>
+                    Faculty Member
+                </h3>
+
+                <div class="person-role">
+                    Lab Director
+                </div>
+
+                <p>
+                    Computational Intelligence · Machine Learning
+                </p>
+
+            </article>
+
+
+            <article class="person-card">
+
+                <div class="person-photo"></div>
+
+                <h3>
+                    Research Associate
+                </h3>
+
+                <div class="person-role">
+                    Researcher
+                </div>
+
+                <p>
+                    Artificial Intelligence · Data Science
+                </p>
+
+            </article>
+
+
+            <article class="person-card">
+
+                <div class="person-photo"></div>
+
+                <h3>
+                    Student Researcher
+                </h3>
+
+                <div class="person-role">
+                    Graduate Student
+                </div>
+
+                <p>
+                    Intelligent Systems · Deep Learning
+                </p>
+
+            </article>
+
+        </div>
+
+        <br><br>
+
+        <a href="#" class="button"
+           style="background:#0b4ea2;color:white;">
+            View All People →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     CONTACT
+========================================= -->
+
+<section class="contact" id="contact">
+
+    <div class="container contact-content">
+
+        <div>
+
+            <h2>
+                Have a question about CI Lab?
+            </h2>
+
+            <p>
+                Get in touch with us to learn more about projects,
+                resources or research opportunities.
+            </p>
+
+        </div>
+
+        <a href="mailto:cilab@sau.ac.in"
+           class="button"
+           style="background:#0b4ea2;color:white;">
+            Contact the Lab →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div>
+
+                <h3>
+                    Computational Intelligence Lab
+                </h3>
+
+                <p>
+                    South Asian University<br>
+                    New Delhi, India
+                </p>
+
+                <br>
+
+                <p>
+                    A platform for learning, projects,
+                    resources and computational intelligence research.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Website
+                </h4>
+
+                <ul>
+
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+
+                    <li>
+                        <a href="#resources">Resources</a>
+                    </li>
+
+                    <li>
+                        <a href="#announcements">Announcements</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Community
+                </h4>
+
+                <ul>
+
+                    <li>
+                        <a href="#people">Faculty</a>
+                    </li>
+
+                    <li>
+                        <a href="#people">Researchers</a>
+                    </li>
+
+                    <li>
+                        <a href="#people">Students</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Opportunities</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Contact
+                </h4>
+
+                <ul>
+
+                    <li>
+                        <a href="mailto:cilab@sau.ac.in">
+                            cilab@sau.ac.in
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            South Asian University
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            New Delhi, India
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <span>
+                © 2026 Computational Intelligence Lab, South Asian University
+            </span>
+
+            <span>
+                All Rights Reserved
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script>
+
+    function toggleMenu() {
+
+        const navigation =
+            document.getElementById("navigation");
+
+        navigation.classList.toggle("active");
+
+    }
+
+
+    // Close mobile navigation after clicking a link
+
+    document
+        .querySelectorAll("#navigation a")
+        .forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                document
+                    .getElementById("navigation")
+                    .classList.remove("active");
+
+            });
+
+        });
+
+</script>
+
+
+</body>
+</html>
+
+
+
